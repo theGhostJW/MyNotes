@@ -1,0 +1,121 @@
+name:                notes
+version:             0.1.0.0
+github:              "githubuser/simple-hpack"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2018 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/simple-hpack#readme>
+
+dependencies:
+  - base
+  - pyrelude
+  # - containers
+  # - extra
+  # - text
+  # - transformers-either
+  # - aeson
+  # - yaml
+  # - pretty-show
+  # - dlist
+  # - raw-strings-qq
+  # - polysemy
+  # - polysemy-plugin
+
+ghc-options:
+  - -fmax-pmcheck-models=10000000
+  - -ferror-spans
+  # - -dth-dec-file -- generate template haskell
+
+  - -O0
+  # TODO: prgma to turn optimisations on for non-dev build
+  # - -O2
+  # - -flate-specialise # reqiuired for polysemy
+  # - -fspecialise-aggressively # reqiuired for polysemy
+  # - -Werror
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -fplugin=Polysemy.Plugin
+  - -fwarn-tabs
+  - -fno-warn-unused-imports
+  - -fno-warn-missing-signatures
+  - -fno-warn-type-defaults
+  - -fno-warn-unused-matches
+  - -fno-warn-unused-binds
+  - -fno-warn-unused-do-bind
+  - -fwrite-ide-info
+  # - -fdefer-type-errors
+
+default-extensions:
+  - AllowAmbiguousTypes
+  - BangPatterns
+  - BlockArguments
+  - ConstrainedClassMethods
+  - ConstraintKinds
+  - DisambiguateRecordFields
+  - DuplicateRecordFields
+  - DataKinds
+  - DefaultSignatures
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - DerivingStrategies
+  - EmptyCase
+  - ExistentialQuantification
+  - ExtendedDefaultRules
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - KindSignatures
+  - LambdaCase
+  - LiberalTypeSynonyms
+  - MultiParamTypeClasses
+  - MultiWayIf
+  - NamedFieldPuns
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - PartialTypeSignatures
+  - PatternSynonyms
+  - PolyKinds
+  - QuasiQuotes
+  - RankNTypes
+  - RecordWildCards
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - StrictData
+  - TemplateHaskell
+  - TupleSections
+  - TypeApplications
+  - TypeFamilies
+  - TypeFamilyDependencies
+  - TypeOperators
+
+library:
+  source-dirs: src
+  dependencies:
+    - deepseq
+    - unordered-containers
+    - template-haskell
+    - bytestring
+    - mtl
+    - fmt
