@@ -102,6 +102,7 @@ Automation Framework Principles
   * highly focussed on data driven testing
     * object lists
     * generative testing
+  * Mechanism for handling known errors / type 2 errors
   * multiple asserts in one test
   * big emphasis on logging reporting
   * utilise existing packages and libraries such as Selenium / Appium / C# rest ?? 
